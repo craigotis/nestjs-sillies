@@ -4,7 +4,7 @@ import { PizzaModule } from './pizza/pizza.module';
 import { PastaModule } from './pasta/pasta.module';
 
 @Module({
-  imports: [PizzaModule, PastaModule],
+  imports: [PastaModule, PizzaModule],
   controllers: [],
   providers: [AppService],
 })
