@@ -20,20 +20,20 @@ describe('AppController (e2e)', () => {
     const config = app.get(FOOD_SERVICE);
     const pastaService = app.get(PastaService);
     const pizzaService = app.get(PizzaService);
-    const pizzaConfig = app
-      .select(PizzaModule)
-      .select(FoodModule)
-      .get(FOOD_SERVICE, { strict: true });
-    const pastaConfig = app
-      .select(PastaModule)
-      .select(FoodModule)
-      .get(FOOD_SERVICE, { strict: true });
+    // const pizzaConfig = app
+    //   .select(PizzaModule)
+    //   .select(FoodModule)
+    //   .get(FOOD_SERVICE, { strict: true });
+    // const pastaConfig = app
+    //   .select(PastaModule)
+    //   .select(FoodModule)
+    //   .get(FOOD_SERVICE, { strict: true });
     console.log('Config:', {
       nestChosen: config.favorite,
       pastaService: pastaService.getFavoriteFood(),
-      pastaConfig: pastaConfig.favorite,
+      // pastaConfig: pastaConfig.favorite,
       pizzaService: pizzaService.getFavoriteFood(),
-      pizzaConfig: pizzaConfig.favorite,
+      // pizzaConfig: pizzaConfig.favorite,
     });
   });
 
