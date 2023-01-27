@@ -1,13 +1,9 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { FoodModule } from '../food/food.module';
 import { PizzaService } from './pizza.service';
 
 @Module({
-  imports: [
-    ConfigModule.forFeature(() => ({
-      favoriteFood: 'pizza',
-    })),
-  ],
+  imports: [FoodModule.register({ favoriteFood: 'pizza' })],
   providers: [PizzaService],
 })
 export class PizzaModule {}
